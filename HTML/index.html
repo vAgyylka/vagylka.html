@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Hello! Glad you're here :) Here you can take a look at my previous and current projects and get to know me </p>
+        <img src="assets/img/profile.jpg" alt="Profile Image">
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h1>Resume</h1>
+        <p>Here is a summary of my experience, skills, and education.</p>
+        <ul>
+            <li><strong>Experience:</strong> So far I have no experience in similar work fields but I am looking forward to learning skills</li>
+            <li><strong>Education:</strong> Second year in Computer Engineering</li>
+            <li><strong>Skills:</strong> HTML, CSS, Python , C programming language</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h1>My Work</h1>
+        <div class="portfolio-item">
+            <img src="assets/img/project1.jpg" alt="Project 1">
+            <p>First project </p>
+        </div>
+        <div class="portfolio-item">
+            <img src="assets/img/project2.jpg" alt="Project 2">
+            <p>Second project</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h1>Services</h1>
+        <ul>
+            <li>Website Development</li>
+            <li> AutoCad designing </li>
+            <li>KiCad tools</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; Personal Porfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
