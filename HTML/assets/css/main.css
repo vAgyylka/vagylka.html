@@ -1,93 +1,301 @@
 
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #9494ea;
     color: #333;
+    background-color: #f9f9f9;
 }
 
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #6a5acd;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Transparent effect */
+    color: #333;
+    padding: 10px 20px; /* Adjusted padding */
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(8px); /* Modern glass-like blur */
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    color: #6a5acd;
 }
 
 header ul {
+    display: flex;
+    justify-content: flex-end; /* Push links to the right */
+    gap: 20px;
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-header ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
 header ul li a {
-    color: white;
+    font-size: 1.1em;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+header ul li a:hover {
+    background-color: #6a5acd;
+    color: #fff;
+}
+
+
+/* Section Styles */
 section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 50px;
+    margin: 30px auto;
     text-align: center;
     background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    max-width: 800px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Smoother hover effect */
 }
 
 section h1 {
-    margin-bottom: 10px;
-    font-size: 2em;
+    font-size: 2.8em; /* Slightly larger */
+    color: #6a5acd;
+    margin-bottom: 20px;
+    text-transform: capitalize; /* Professional look */
+}
+
+section p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8; /* Better readability */
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item p {
+    padding: 15px;
+    font-size: 1.2em;
     color: #333;
 }
 
-#about img, .portfolio-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px 0;
-}
 
+/* Forms */
 form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: left;
+    padding: 20px; /* Added padding for better layout */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 8px rgba(106, 90, 205, 0.5);
 }
 
 form button {
-    display: block;
     width: 100%;
-    padding: 10px;
-    background: #333;
+    padding: 12px;
+    background: #6a5acd;
     color: #fff;
     border: none;
     border-radius: 5px;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 form button:hover {
-    background: #555;
+    background: #7b68ee;
+    transform: translateY(-3px);
 }
 
+/* Footer */
+/* Footer */
 footer {
     background: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
 }
+
+footer a {
+    color: #6a5acd;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #7b68ee;
+}
+
+/* Scroll-to-Top Button */
+#scrollToTopBtn {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #6a5acd;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+#scrollToTopBtn:hover {
+    background-color: #7b68ee;
+    transform: scale(1.1);
+}
+
+
+/* Toggle Button */
+.toggle-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#theme-btn {
+    padding: 12px 24px; /* Bigger button */
+    background: #ffdd57;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#theme-btn:hover {
+    background: #f4c542;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body.dark section {
+    background: #444;
+    color: #f9f9f9;
+}
+
+body.dark header {
+    background: linear-gradient(90deg, #444, #666);
+}
+
+body.dark footer {
+    background: #444;
+}
+
+body.dark form input,
+body.dark form textarea {
+    background: #555;
+    color: #f9f9f9;
+    border-color: #666;
+}
+
+body.dark form button {
+    background: #666;
+}
+
+body.dark #theme-btn {
+    background: #555;
+    color: #f9f9f9;
+}
+
+

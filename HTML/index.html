@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <div id="theme-toggle" class="toggle-container">
+        <button id="theme-btn">Light/Dark Mode</button>
+    </div>
+
     <!-- Header Section -->
     <header id="header">
+        <h1>Rugilė's Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -19,12 +28,14 @@
             </ul>
         </nav>
     </header>
+    
+    
 
     <!-- About Section -->
     <section id="about">
         <h1>About Me</h1>
-        <p>Hello! Glad you're here :) Here you can take a look at my previous and current projects and get to know me </p>
-        <img src="assets/img/profile.jpg" alt="Profile Image">
+        <p>Hello! Glad you're here :) My name is Rugilė, and here you can take a look at my previous and current projects and get to know me.</p>
+        <img src="assets/img/profile.jpg" alt="Profile Image" style="max-width: 100%; height: auto; border-radius: 50%;">
     </section>
 
     <!-- Resume Section -->
@@ -32,33 +43,51 @@
         <h1>Resume</h1>
         <p>Here is a summary of my experience, skills, and education.</p>
         <ul>
-            <li><strong>Experience:</strong> So far I have no experience in similar work fields but I am looking forward to learning skills</li>
-            <li><strong>Education:</strong> Second year in Computer Engineering</li>
-            <li><strong>Skills:</strong> HTML, CSS, Python , C programming language</li>
+            <li><strong>Experience:</strong> So far, I have no experience in similar work fields, but I am looking forward to learning skills.</li>
+            <li><strong>Education:</strong> Second year in Computer Engineering.</li>
+            <li><strong>Skills:</strong> HTML, CSS, Python, C programming language.</li>
         </ul>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h1>My Work</h1>
-        <div class="portfolio-item">
-            <img src="assets/img/project1.jpg" alt="Project 1">
-            <p>First project </p>
-        </div>
-        <div class="portfolio-item">
-            <img src="assets/img/project2.jpg" alt="Project 2">
-            <p>Second project</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="assets/img/project1.jpg" alt="Project 1">
+                <p>Responsive Website Design</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/img/project2.jpg" alt="Project 2">
+                <p>Interactive Dashboard</p>
+            </div>
         </div>
     </section>
-
+    
     <!-- Services Section -->
     <section id="services">
         <h1>Services</h1>
         <ul>
             <li>Website Development</li>
-            <li> AutoCad designing </li>
-            <li>KiCad tools</li>
+            <li>AutoCAD Designing</li>
+            <li>KiCad Tools</li>
         </ul>
+
+        <!-- Video Section -->
+        <h2>Sample Video</h2>
+        <video controls width="100%">
+            <source src="assets/video/sample.mp4" type="video/mp4">
+            <source src="assets/video/sample.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Audio Section -->
+        <h2>Audio File</h2>
+        <audio controls>
+            <source src="assets/audio/sample.mp3" type="audio/mpeg">
+            <source src="assets/audio/sample.ogg" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
     </section>
 
     <!-- Contact Section -->
@@ -80,7 +109,40 @@
 
     <!-- Footer Section -->
     <footer id="footer">
-        <p>&copy; Personal Porfolio. All Rights Reserved.</p>
+        <p>&copy; 2024 Rugilė. All Rights Reserved.</p>
+        <p>Follow me:
+            <a href="https://www.facebook.com/rugile.krausauskaite.5" target="_blank">Facebook</a> |
+            <a href="https://github.com/vAgyylka" target="_blank">GitHub</a>
+        </p>
     </footer>
+    
+    
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        document.getElementById('theme-btn').addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+    </script>
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+<script>
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Show the button when scrolling down
+    window.onscroll = () => {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    };
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
 </body>
 </html>
+
