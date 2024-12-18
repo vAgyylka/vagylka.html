@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -17,7 +16,7 @@
 
     <!-- Header Section -->
     <header id="header">
-        <h1>Rugilė's Portfolio</h1>
+        <h1>Personal Portfolio</h1> 
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -29,18 +28,51 @@
         </nav>
     </header>
     
-    
-
     <!-- About Section -->
     <section id="about">
-        <h1>About Me</h1>
+        <h2>About Me</h2> 
         <p>Hello! Glad you're here :) My name is Rugilė, and here you can take a look at my previous and current projects and get to know me.</p>
         <img src="assets/img/profile.jpg" alt="Profile Image" style="max-width: 100%; height: auto; border-radius: 50%;">
+    
+        <!-- Mathematical Formula -->
+        <h3>My Favorite Math Formula</h3> 
+        <p>
+            The formula for standard deviation is:
+        </p>
+ <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+    <mi>σ</mi>
+    <mo>=</mo>
+    <msqrt>
+        <mfrac>
+            <mn>1</mn>
+            <mi>N</mi>
+        </mfrac>
+        <mo>∑</mo>
+        <mrow>
+            <msubsup>
+                <mi>i</mi>
+                <mn>1</mn>
+                <mi>N</mi>
+            </msubsup>
+            <msup>
+                <mrow>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>−</mo>
+                    <mi>μ</mi>
+                    <mo>)</mo>
+                </mrow>
+                <mn>2</mn>
+            </msup>
+        </mrow>
+    </msqrt>
+</math>
     </section>
+    
 
     <!-- Resume Section -->
     <section id="resume">
-        <h1>Resume</h1>
+        <h2>Resume</h2> 
         <p>Here is a summary of my experience, skills, and education.</p>
         <ul>
             <li><strong>Experience:</strong> So far, I have no experience in similar work fields, but I am looking forward to learning skills.</li>
@@ -51,7 +83,7 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio">
-        <h1>My Work</h1>
+        <h2>My Work</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <img src="assets/img/project1.jpg" alt="Project 1">
@@ -66,23 +98,31 @@
     
     <!-- Services Section -->
     <section id="services">
-        <h1>Services</h1>
+        <h2>Services</h2> 
         <ul>
             <li>Website Development</li>
             <li>AutoCAD Designing</li>
             <li>KiCad Tools</li>
         </ul>
-
+    
+        <!-- SVG Graphic -->
+        <h3>Creative Graphic</h3>   
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" stroke="purple" stroke-width="5" fill="lavender" />
+            <line x1="50" y1="50" x2="150" y2="150" stroke="purple" stroke-width="4" />
+            <text x="50" y="180" font-family="Arial" font-size="20" fill="purple"></text>
+        </svg>
+    
         <!-- Video Section -->
-        <h2>Sample Video</h2>
-        <video controls width="100%">
+        <h3>Sample Video</h3>   
+        <video controls style="width: 70%;"> 
             <source src="assets/video/sample.mp4" type="video/mp4">
             <source src="assets/video/sample.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
 
         <!-- Audio Section -->
-        <h2>Audio File</h2>
+        <h3>Audio File</h3>
         <audio controls>
             <source src="assets/audio/sample.mp3" type="audio/mpeg">
             <source src="assets/audio/sample.ogg" type="audio/ogg">
@@ -92,57 +132,174 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h1>Contact Me</h1>
-        <form action="#" method="POST">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="#" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <h2>Additional questions</h2>
+            <label for="q1">Rate website's readability (1-10):</label>
+            <input type="number" id="q1" name="q1" min="1" max="10" required>
+            
+            <label for="q2">Rate website's design (1-10):</label>
+            <input type="number" id="q2" name="q2" min="1" max="10" required>
+            
+            <label for="q3">How confident are you in your personal programming skills?(1-10):</label>
+            <input type="number" id="q3" name="q3" min="1" max="10" required>
+            
+            <label for="q4">How likely are you to recommend this portfolio to others?  (1-10):</label>
+            <input type="number" id="q4" name="q4" min="1" max="10" required>
+            
+            <label for="q5">How interested would you be in collaborating on future projects? (1-10):</label>
+            <input type="number" id="q5" name="q5" min="1" max="10" required>
+            
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
             
             <button type="submit">Send</button>
         </form>
+    
+        <h3>Form Results</h3>
+        <div id="results"></div>
     </section>
+    
 
     <!-- Footer Section -->
     <footer id="footer">
-        <p>&copy; 2024 Rugilė. All Rights Reserved.</p>
+        <p>&copy; Personal Portfolio. All Rights Reserved.</p>
         <p>Follow me:
-            <a href="https://www.facebook.com/rugile.krausauskaite.5" target="_blank">Facebook</a> |
             <a href="https://github.com/vAgyylka" target="_blank">GitHub</a>
         </p>
+        <div id="clock-container" style="text-align: center; margin: 20px;">
+            <h3>Current Time</h3> 
+            <div id="clock" style="font-size: 1.5em; font-weight: bold; color: #6a5acd;"></div>
+        </div>
+        
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const time = now.toLocaleTimeString(); 
+                document.getElementById('clock').textContent = time;
+            }
+        
+            setInterval(updateClock, 1000); 
+            updateClock(); 
+        </script>        
     </footer>
     
-    
-
     <!-- JavaScript for Theme Toggle -->
     <script>
         document.getElementById('theme-btn').addEventListener('click', () => {
             document.body.classList.toggle('dark');
         });
     </script>
-<button id="scrollToTopBtn" title="Go to top">↑</button>
-<script>
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    // Show the button when scrolling down
-    window.onscroll = () => {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
+        // Show the button when scrolling down
+        window.onscroll = () => {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        };
+
+        // Smooth scroll to the top
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
+    // Validation function for email, phone, and address
+    function validateForm() {
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const address = document.getElementById("address").value;
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
         }
-    };
 
-    // Smooth scroll to the top
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
+        // Phone validation regex (10 digits)
+        const phoneRegex = /^\d{10}$/;
+        if (!phoneRegex.test(phone)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return false;
+        }
 
+        // Address validation (non-empty)
+        if (address.trim() === "") {
+            alert("Address cannot be empty.");
+            return false;
+        }
+
+        return true;
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Perform validation
+    if (!validateForm()) {
+        return;
+    }
+
+    // Collect form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+
+    const q1 = parseInt(document.getElementById("q1").value);
+    const q2 = parseInt(document.getElementById("q2").value);
+    const q3 = parseInt(document.getElementById("q3").value);
+    const q4 = parseInt(document.getElementById("q4").value);
+    const q5 = parseInt(document.getElementById("q5").value);
+
+    const message = document.getElementById("message").value;
+
+    // Calculate average score
+    const totalScore = q1 + q2 + q3 + q4 + q5;
+    const averageScore = totalScore / 5;
+
+    // Determine score color
+    let scoreColor;
+    if (averageScore >= 0 && averageScore <= 4) {
+        scoreColor = "red";
+    } else if (averageScore <= 7) {
+        scoreColor = "orange";
+    } else {
+        scoreColor = "green";
+    }
+
+    // Display results on the webpage
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.innerHTML = `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Average Score:</strong> <span style="color: ${scoreColor};">${averageScore}</span></p>
+    `;
+
+    // Log results to the console (now inside the function)
+    console.log(`Name: ${name}`);
+    console.log(`Average Score: ${averageScore}`);
+});
+
+    </script>
 </body>
 </html>
 
